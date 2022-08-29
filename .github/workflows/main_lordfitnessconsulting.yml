@@ -11,6 +11,10 @@ on:
 
 jobs:
   build:
+    defaults: 
+      run:
+        working-directory: webapp
+
     runs-on: windows-latest
 
     steps:
