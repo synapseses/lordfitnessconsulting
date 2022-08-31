@@ -107,3 +107,9 @@
     color: #1a202c;
     color: rgba(26, 32, 44, var(--text-opacity));
 }
+
+.header-area {
+  /* background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/images/header-bg.jpg); */
+  background: linear-gradient(0deg, RGBA(14, 165, 233, 0.4), RGBA(14, 165, 233, 0.4)), url(assets/images/header-bg.jpg);
+  background-position-y: bottom;
+}
