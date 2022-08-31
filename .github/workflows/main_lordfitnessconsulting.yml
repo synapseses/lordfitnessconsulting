@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: webapp
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: dist
+          path: ./dist
 
   deploy:
     runs-on: ubuntu-latest
