@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
@@ -13,4 +14,12 @@ export class AppComponent {
   faTwitter = faTwitter;
   faUser = faUser;
   faQuoteRight = faQuoteRight;
+
+  constructor(private viewportScroller: ViewportScroller) {
+
+  }
+
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 }

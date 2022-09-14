@@ -1,12 +1,5 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <style>
-
-    </style>
-</head>
-
 <body>
     <header class="header-area">
         <div class="navigation bg-gray-50">
@@ -24,19 +17,19 @@
                                     class="items-center content-start mr-auto lg:justify-center md:justify-end navbar-nav md:flex">
                                     <!-- flex flex-row mx-auto my-0 navbar-nav -->
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home">HOME</a>
+                                        <a class="page-scroll" (click)="onClickScroll('home')" href="#homes">HOME</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#service">SERVICES</a>
+                                        <a class="page-scroll" (click)="onClickScroll('services')" href="#services">SERVICES</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#pricing">PRICING</a>
+                                        <a class="page-scroll" (click)="onClickScroll('pricing')" href="#pricing">PRICING</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#testimonial">TESTIMONIAL</a>
+                                        <a class="page-scroll" (click)="onClickScroll('testimonials')" href="#testimonial">TESTIMONIAL</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#contact">CONTACT</a>
+                                        <a class="page-scroll" (click)="onClickScroll('contact')" href="#contact">CONTACT</a>
                                     </li>
                                 </ul>
                             </div>
@@ -44,13 +37,13 @@
                             <div class="items-center justify-end hidden navbar-social lg:flex">
                                 <span class="mr-4 font-bold text-gray-900 uppercase">FOLLOW US</span>
                                 <ul class="flex footer-social">
-                                    <li><a href="#">
+                                    <li><a href="https://www.facebook.com/lordfitnessconsulting/" target="_blank">
                                             <fa-icon [icon]="faFacebook"></fa-icon>
                                         </a></li>
-                                    <li><a href="#">
+                                    <li><a href="https://www.instagram.com/lordfitnessconsulting/" target="_blank">
                                             <fa-icon [icon]="faInstagram"></fa-icon>
                                         </a></li>
-                                    <li><a href="#">
+                                    <li class="hidden"><a href="#">
                                             <fa-icon [icon]="faTwitter"></fa-icon>
                                         </a></li>
                                 </ul>
@@ -74,7 +67,7 @@
                                 <li><a class="mx-4 p-5 border border-gray-100 border-solid hover:text-sky-500 hover:bg-gray-100 duration-300 uppercase"
                                         href="#">Book Now</a></li>
                                 <li><a class="mx-4 p-5 border border-gray-100 border-solid hover:text-sky-500 hover:bg-gray-100 duration-300 uppercase"
-                                        href="/contact">Get in touch</a></li>
+                                        (click)="onClickScroll('contact')" href="#contact">Get in touch</a></li>
                             </ul>
                         </div> <!-- header content -->
                     </div>
@@ -82,7 +75,7 @@
             </div> <!-- container -->
         </div> <!-- header content -->
     </header>
-    <section id="service" class="py-20">
+    <section id="services" class="py-20">
         <div class="container">
             <div class="flex">
                 <div class="w-full mx-4 lg:w-2/2">
@@ -160,7 +153,46 @@
         </div> <!-- container -->
     </section>
 
-    <section id="testimonials" class="py-20 bg-gray-50">
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="flex">
+                <div class="w-full mx-4">
+                    <div class="section-title">
+                        <h4 class="title">Pricing</h4>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="flex">
+                <div class="w-full">
+                    <div class="row">
+                        <div class="w-full md:w-1/3">
+                            <div class="block mx-4 border border-sky-600 border-solid">
+                                <div class="text-center">
+                                    Lite
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="w-full md:w-1/3">
+                            <div class="block mx-4 border border-sky-600 border-solid">
+                                <div class="text-center">
+                                    Standard
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="w-full md:w-1/3">
+                            <div class="block mx-4 border border-sky-600 border-solid">
+                                <div class="text-center">
+                                    Premium
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
+    <section id="testimonials" class="py-20 bg-gray-0">
         <div class="container">
             <div class="flex">
                 <div class="w-full mx-4">
@@ -249,6 +281,39 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container">
+            <div class="flex">
+                <div class="w-full mx-4">
+                    <div class="section-title">
+                        <h4 class="title">Contact Us</h4>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="flex">
+                <div class="w-full">
+                    <div class="row">
+                        <div class="w-full md:w-1/3">
+                            <div class="block mx-4 border border-sky-600 border-solid">
+                                <div class="text-center">
+                                    Contact details
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="block mx-4 border border-sky-600 border-solid">
+                                <div class="text-center">
+                                    Google map
+                                </div>
+                            </div> <!-- services content -->
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
     <footer>
         <div class="bg-gray-100">
             <div class="container">
